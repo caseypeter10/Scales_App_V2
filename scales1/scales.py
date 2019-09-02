@@ -137,8 +137,8 @@ def draw_board(board, width=1080, height=200):
 
     #prepping fonts
     #ont_path = "fonts\\AGENCYB.ttf"
-    arial = ImageFont.truetype("arial", 13)
-    font = arial
+    #arial = ImageFont.truetype("arial", 13)
+    #font = arial
     note_fill = 'yellow'
 
 
@@ -205,17 +205,17 @@ def draw_board(board, width=1080, height=200):
                     draw.ellipse((top_left_bound, bottom_right_bound), fill=(100, 0, 0), outline=(80, 0, 10), width=3)
 
                     if '#' in board[i][j] or 'b' in board[i][j]:
-                        draw.text((cumulative_distance_list[j] + 55,string_y-7), board[i][j][:2], fill=note_fill, font=font)
+                        draw.text((cumulative_distance_list[j] + 55,string_y-7), board[i][j][:2], fill=note_fill)
                     else:
-                        draw.text((cumulative_distance_list[j] + 58, string_y - 7), board[i][j][:1], fill=note_fill, font=font)
+                        draw.text((cumulative_distance_list[j] + 58, string_y - 7), board[i][j][:1], fill=note_fill)
 
                 #Note is not in major scale
                 else:
                     draw.ellipse((top_left_bound,bottom_right_bound),fill=(100,100,100),outline=(80,80,90),width=3)
                     if '#' in board[i][j] or 'b' in board[i][j]:
-                        draw.text((cumulative_distance_list[j] + 55, string_y-7), board[i][j], fill=note_fill, font=font)
+                        draw.text((cumulative_distance_list[j] + 55, string_y-7), board[i][j], fill=note_fill)
                     else:
-                        draw.text((cumulative_distance_list[j] + 58, string_y - 7), board[i][j][:1], fill=note_fill, font=font)
+                        draw.text((cumulative_distance_list[j] + 58, string_y - 7), board[i][j][:1], fill=note_fill)
 
 
             # Note is not an "open note"
@@ -230,18 +230,18 @@ def draw_board(board, width=1080, height=200):
                     draw.ellipse((top_left_bound, bottom_right_bound), fill=(100, 0, 0), outline=(80, 0, 10), width=3)
 
                     if '#' in board[i][j] or 'b' in board[i][j]:
-                        draw.text((midpoint_list[j-1]-5,string_y-7), board[i][j][:2], fill=note_fill, font=font)
+                        draw.text((midpoint_list[j-1]-5,string_y-7), board[i][j][:2], fill=note_fill)
 
                     else:
-                        draw.text((midpoint_list[j-1] - 2, string_y - 7), board[i][j][:1], fill=note_fill, font=font)
+                        draw.text((midpoint_list[j-1] - 2, string_y - 7), board[i][j][:1], fill=note_fill)
 
                 else:
                     draw.ellipse((top_left_bound,bottom_right_bound),fill=(100,100,100),outline=(80,80,90),width=3)
 
                     if '#' in board[i][j] or 'b' in board[i][j]:
-                        draw.text((midpoint_list[j-1]-5, string_y-7), board[i][j], fill=note_fill, font=font)
+                        draw.text((midpoint_list[j-1]-5, string_y-7), board[i][j], fill=note_fill)
                     else:
-                        draw.text((midpoint_list[j-1] - 2, string_y - 7), board[i][j][:1], fill=note_fill, font=font)
+                        draw.text((midpoint_list[j-1] - 2, string_y - 7), board[i][j][:1], fill=note_fill)
 
         #Handling octave at 12th fret
         top_left_bound = (midpoint_list[j] - 10, string_y - 10)
@@ -252,18 +252,18 @@ def draw_board(board, width=1080, height=200):
             draw.ellipse((top_left_bound, bottom_right_bound), fill=(100, 0, 0), outline=(80, 0, 10), width=3)
 
             if '#' in board[i][0] or 'b' in board[i][0]:
-                draw.text((midpoint_list[j] - 5, string_y - 7), board[i][0][:2], fill=note_fill, font=font)
+                draw.text((midpoint_list[j] - 5, string_y - 7), board[i][0][:2], fill=note_fill)
 
             else:
-                draw.text((midpoint_list[j] - 2, string_y - 7), board[i][0][:1], fill=note_fill, font=font)
+                draw.text((midpoint_list[j] - 2, string_y - 7), board[i][0][:1], fill=note_fill)
 
         else:
             draw.ellipse((top_left_bound, bottom_right_bound), fill=(100, 100, 100), outline=(80, 80, 90), width=3)
 
             if '#' in board[i][0] or 'b' in board[i][0]:
-                draw.text((midpoint_list[j] - 5, string_y - 7), board[i][0], fill=note_fill, font=font)
+                draw.text((midpoint_list[j] - 5, string_y - 7), board[i][0], fill=note_fill)
             else:
-                draw.text((midpoint_list[j] - 2, string_y - 7), board[i][0][:1], fill=note_fill, font=font)
+                draw.text((midpoint_list[j] - 2, string_y - 7), board[i][0][:1], fill=note_fill)
     img.show()
 
 
