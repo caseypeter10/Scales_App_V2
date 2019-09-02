@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+
+<form action="{% url 'scales_app:GenBoard' %}" method="post">
+    {% csrf_token %}
+    <label>Select a major scale:</label>
+    <select name="scale">
+        <option value="C">C</option>
+        <option value="G">G</option>
+        <option value="D">D</option>
+        <option value="A">A</option>
+        <option value="E">E</option>
+        <option value="B">B</option>
+        <option value="F#">F#</option>
+        <option value="C#">C#</option>
+        <option value="F">F</option>
+        <option value="Bb">Bb</option>
+        <option value="Eb">Eb</option>
+        <option value="Ab">Ab</option>
+    </select>
+    <br>
+
+    <label>String 1 tuning:</label>
+    <select name="string1" id="string1" value="">
+            <option value="C">C</option>
+            <option value="G">G</option>
+            <option value="D">D</option>
+            <option value="A">A</option>
+            <option value="E">E</option>
+            <option value="B">B</option>
+            <option value="F#">F#</option>
+            <option value="C#">C#</option>
+            <option value="F">F</option>
+            <option value="Bb">Bb</option>
+            <option value="Eb">Eb</option>
+            <option value="Ab">Ab</option>
+    </select>
+    <br>
+
+    <label>String 2 tuning:</label>
+    <select name="string2" id="string2" value="">
+            <option value="C">C</option>
+            <option value="G">G</option>
+            <option value="D">D</option>
+            <option value="A">A</option>
+            <option value="E">E</option>
+            <option value="B">B</option>
+            <option value="F#">F#</option>
+            <option value="C#">C#</option>
+            <option value="F">F</option>
+            <option value="Bb">Bb</option>
+            <option value="Eb">Eb</option>
+            <option value="Ab">Ab</option>
+    </select>
+    <br>
+
+    <label>String 3 tuning:</label>
+    <select name="string3" id="string3" value="">
+            <option value="C">C</option>
+            <option value="G">G</option>
+            <option value="D">D</option>
+            <option value="A">A</option>
+            <option value="E">E</option>
+            <option value="B">B</option>
+            <option value="F#">F#</option>
+            <option value="C#">C#</option>
+            <option value="F">F</option>
+            <option value="Bb">Bb</option>
+            <option value="Eb">Eb</option>
+            <option value="Ab">Ab</option>
+    </select>
+    <br>
+
+    <label>String 4 tuning:</label>
+    <select name="string4" id="string4" value="">
+            <option value="C">C</option>
+            <option value="G">G</option>
+            <option value="D">D</option>
+            <option value="A">A</option>
+            <option value="E">E</option>
+            <option value="B">B</option>
+            <option value="F#">F#</option>
+            <option value="C#">C#</option>
+            <option value="F">F</option>
+            <option value="Bb">Bb</option>
+            <option value="Eb">Eb</option>
+            <option value="Ab">Ab</option>
+    </select>
+    <br>
+
+    <label>String 5 tuning:</label>
+    <select name="string5" id="string5" value="">
+            <option value="C">C</option>
+            <option value="G">G</option>
+            <option value="D">D</option>
+            <option value="A">A</option>
+            <option value="E">E</option>
+            <option value="B">B</option>
+            <option value="F#">F#</option>
+            <option value="C#">C#</option>
+            <option value="F">F</option>
+            <option value="Bb">Bb</option>
+            <option value="Eb">Eb</option>
+            <option value="Ab">Ab</option>
+    </select>
+    <br>
+
+    <label>String 6 tuning:</label>
+    <select name="string6" id="string6" value="">
+            <option value="C">C</option>
+            <option value="C#">C#</option>
+            <option value="D">D</option>
+            <option value="D#">D#</option>
+            <option value="E">E</option>
+            <option value="F">F</option>
+            <option value="F#">F#</option>
+            <option value="G">G</option>
+            <option value="G#">G#</option>
+            <option value="A">A</option>
+
+            <option value="B">B</option>
+
+
+
+            <option value="Bb">Bb</option>
+            <option value="Eb">Eb</option>
+            <option value="Ab">Ab</option>
+    </select>
+    <br>
+
+
+    <br>
+    <input type="submit" value="Gen Board">
+</form>
+
+</body>
+</html>
