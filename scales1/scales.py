@@ -141,7 +141,7 @@ def draw_board(board, width=1080, height=200):
 
 
 
-    agencyb = ImageFont.truetype("/AGENCYB.TTF", 13)
+    agencyb = ImageFont.truetype("/app/AGENCYB.TTF", 13)
     font = agencyb
 
     left_shift = 0
