@@ -137,7 +137,7 @@ def draw_board(board, width=1080, height=200):
 
     #prepping fonts
     #font_path = "fonts\\AGENCYB.ttf"
-    arial = ImageFont.truetype("AGENCYB.ttf", 13)
+    arial = ImageFont.truetype("/AGENCYB.ttf", 13)
     left_shift = 0
 
     font = arial
