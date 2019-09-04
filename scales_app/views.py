@@ -34,8 +34,8 @@ def GenBoard(request):
     tunings.append(fretboard['string6'])
 
     img = scales.gen_board(scale, tunings)
-    response = HttpResponse(content_type = "image/png")
-    img.save(response, "PNG")
+    response = HttpResponse(content_type = "image/bmp")
+    img.save(response, "BMP")
     return response
 
     #return HttpResponseRedirect(reverse('scales_app:SelectBoard'))
