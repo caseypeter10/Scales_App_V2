@@ -34,7 +34,7 @@ def GenBoard(request):
     tunings.append(fretboard['string6'])
 
     img = scales.gen_board(scale, tunings)
-    response = HttpResponse(mimetype = "image/png")
+    response = HttpResponse(content_type = "image/png")
     img.save(response, "PNG")
     return response
 
