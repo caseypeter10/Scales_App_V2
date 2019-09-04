@@ -20,7 +20,9 @@ def SelectBoard(request):
 def GenBoard(request):
     fretboard = request.POST
 
-    size = (int(1080*1.4),int(200*1.4))
+    img_scale = 1
+
+    size = (int(1080*img_scale),int(200*img_scale))
 
     #print(fretboard)
 
