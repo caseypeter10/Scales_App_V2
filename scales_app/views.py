@@ -20,6 +20,8 @@ def SelectBoard(request):
 def GenBoard(request):
     fretboard = request.POST
 
+    size = (1080,200)
+
     #print(fretboard)
 
     tunings = []
@@ -34,6 +36,8 @@ def GenBoard(request):
     tunings.append(fretboard['string6'])
 
     img = scales.gen_board(scale, tunings)
+    img = img.resize(size*1.5)
+
     response = HttpResponse(content_type = "image/bmp")
     img.save(response, "BMP")
     return response
