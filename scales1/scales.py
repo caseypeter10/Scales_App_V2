@@ -136,9 +136,9 @@ def c_major_test():
 def draw_board(board, width=1080, height=200):
 
     #prepping fonts
-    #ont_path = "fonts\\AGENCYB.ttf"
-    arial = ImageFont.truetype("arial", 13)
-    left_shift = -2
+    #font_path = "fonts\\AGENCYB.ttf"
+    arial = ImageFont.truetype("AGENCYB", 13)
+    left_shift = 0
 
     font = arial
     note_fill = 'yellow'
