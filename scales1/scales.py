@@ -1,5 +1,6 @@
 from PIL import Image, ImageDraw, ImageFont
 
+
 def string_prep(start, notes):
     # This function provides an organized string of notes that can be used to generate the
     # note values for a guitar string. The value passed into the start variable represents
@@ -137,10 +138,13 @@ def draw_board(board, width=1080, height=200):
 
     #prepping fonts
     #font_path = "fonts\\AGENCYB.ttf"
-    arial = ImageFont.truetype("/AGENCYB.ttf", 13)
-    left_shift = 0
 
-    font = arial
+    
+
+    agencyb = ImageFont.truetype("/AGENCYB.ttf", 13)
+    font = agencyb
+
+    left_shift = 0
     note_fill = 'yellow'
 
 
