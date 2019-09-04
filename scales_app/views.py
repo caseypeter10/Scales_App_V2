@@ -4,6 +4,7 @@ from django.http import HttpResponse, HttpResponseRedirect
 from django.urls import reverse
 from django.template import loader
 from django.views import generic
+from PIL import Image
 
 from scales1 import scales
 from .models import Fretboard
@@ -19,7 +20,7 @@ def SelectBoard(request):
 def GenBoard(request):
     fretboard = request.POST
 
-    print(fretboard)
+    #print(fretboard)
 
     tunings = []
 
@@ -32,6 +33,9 @@ def GenBoard(request):
     tunings.append(fretboard['string5'])
     tunings.append(fretboard['string6'])
 
-    scales.gen_board(scale, tunings)
+    img = scales.gen_board(scale, tunings)
+    response = HttpResponse(mimetype = "image/png")
+    img.save(response, "PNG")
+    return response
 
-    return HttpResponseRedirect(reverse('scales_app:SelectBoard'))
+    #return HttpResponseRedirect(reverse('scales_app:SelectBoard'))

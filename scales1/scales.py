@@ -264,11 +264,12 @@ def draw_board(board, width=1080, height=200):
                 draw.text((midpoint_list[j] - 5, string_y - 7), board[i][0], fill=note_fill)
             else:
                 draw.text((midpoint_list[j] - 2, string_y - 7), board[i][0][:1], fill=note_fill)
-    img.show()
+    #img.show()
+    return img
 
 
 def gen_board(scale, tunings):
     fretboard_w_scale = scale_on_board(scale_finder(scale, note_filter(scale)), fretboard(tunings, scale))
     fretboard_w_scale.reverse()
-    draw_board(fretboard_w_scale)
-
+    img = draw_board(fretboard_w_scale)
+    return img
